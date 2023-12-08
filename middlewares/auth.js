@@ -18,7 +18,7 @@ router.post('/auth', async (req, res) => {
     }
 
     // Generar token JWT utilizando el secreto cargado desde .env
-    const token = jwt.sign({ id: usuarioEncontrado._id, email: usuarioEncontrado.email }, process.env.TOKEN_SECRET, { expiresIn: '3m' });
+    const token = jwt.sign({ id: usuarioEncontrado._id, email: usuarioEncontrado.email }, process.env.TOKEN_SECRET, { expiresIn: '1m' });
 
     // Almacenar el token en el encabezado de la respuesta (res)
     res.header('Authorization', `Bearer ${token}`).json({ mensaje: 'Inicio de sesión exitoso', token });
