@@ -1,2 +1,2 @@
-# pruebaproyecto
- prueba para verificar error
+# ProyectoDD
+Repositorio para clase de Diseño Digital
